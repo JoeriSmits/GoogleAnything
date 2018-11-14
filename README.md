@@ -6,7 +6,7 @@ Google Anything is an extension for the Visual Studio Code editor. It's main pur
 
 Use command ```Google``` to start searching. After you typed your search query a window will open with Google's search results. The color theme of the window matches your editor's preference.
 
-![Searching in editor with Google Anything\](https://github.com/JoeriSmits/GoogleAnything/blob/master/screenshots/demo.gif)
+![Searching in editor with Google Anything](https://github.com/JoeriSmits/GoogleAnything/blob/master/screenshots/demo.gif)
 
 ## Extension Settings
 

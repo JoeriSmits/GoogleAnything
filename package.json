@@ -1,0 +1,48 @@
+{
+    "name": "googleanything",
+    "displayName": "GoogleAnything",
+    "description": "Extension to search for anything on Google in your code editor",
+    "version": "0.0.1",
+    "publisher": "joeriSmits",
+    "license": "SEE LICENSE IN LICENSE.txt",
+    "homepage": "https://github.com/JoeriSmits/GoogleAnything",
+    "bugs": {
+        "url": "https://github.com/JoeriSmits/GoogleAnything/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JoeriSmits/GoogleAnything.git"
+    },
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.GoogleAnything"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.GoogleAnything",
+                "title": "Google"
+            }
+        ]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21",
+        "eslint": "^4.11.0",
+        "@types/node": "^8.10.25",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "fetch": "^1.1.0"
+    }
+}

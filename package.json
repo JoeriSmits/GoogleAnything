@@ -19,6 +19,7 @@
     "categories": [
         "Other"
     ],
+    "icon": "googleLogo.jpg",
     "activationEvents": [
         "onCommand:extension.GoogleAnything"
     ],

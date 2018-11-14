@@ -37,12 +37,13 @@ exports.deactivate = deactivate;
  */
 function fetchGoogleResultPage(searchInput, callback) {
     const config = vscode.workspace.getConfiguration('GoogleAnything');
-    const googleApiKey = config.googleApiKey || 'AIzaSyAXjhjNugcBUObpIDtEyPNmcGsMEc2od_8';
-    const GoogleCX = config.GoogleCX || '016921860309920165546:88b8m2fdcw8';
-    const url = `https://www.googleapis.com/customsearch/v1?q=${searchInput}&key=${googleApiKey}&cx=${GoogleCX}`;
+    const googleApiKey = config.GoogleApiKey || 'AIzaSyAXjhjNugcBUObpIDtEyPNmcGsMEc2od_8';
+    const googleCX = config.GoogleCX || '016921860309920165546:88b8m2fdcw8';
+    const url = `https://www.googleapis.com/customsearch/v1?q=${searchInput}&key=${googleApiKey}&cx=${googleCX}`;
 
-    fetchUrl(url, (_error, _meta, body) => {
-        callback(JSON.parse(body.toString()));
+    fetchUrl(url, (_error, meta, body) => {
+        if (meta.status !== 200) return callback(false)
+        return callback(JSON.parse(body.toString()));
     });
 }
 
@@ -51,6 +52,7 @@ function fetchGoogleResultPage(searchInput, callback) {
  * @param {Object} searchResultJson JSON with search results
  */
 function generateHTMLPreview(searchResultJson) {
+    if(searchResultJson === false) return `<!DOCTYPE html><body><h1>Whoops, cannot reach Google :(</body></html>`;
     const results = searchResultJson.items;
     const htmlResults = results.map(result => {
         return `

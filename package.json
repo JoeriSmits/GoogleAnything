@@ -29,6 +29,23 @@
                 "command": "extension.GoogleAnything",
                 "title": "Google"
             }
+        ],
+        "configuration": [
+            {
+                "title": "GoogleAnything configuration",
+                "properties": {
+                    "GoogleAnything.GoogleApiKey": {
+                        "type": "string",
+                        "description": "Google API Key for Custom Search",
+                        "default": "AIzaSyAXjhjNugcBUObpIDtEyPNmcGsMEc2od_8"
+                    },
+                    "GoogleAnything.GoogleCX": {
+                        "type": "string",
+                        "description": "Google Custom Search CX code",
+                        "default": "016921860309920165546:88b8m2fdcw8"
+                    }
+                }
+            }
         ]
     },
     "scripts": {

@@ -12,8 +12,9 @@ function activate(context) {
     let disposable = vscode.commands.registerCommand('extension.GoogleAnything', function () {
         // The code you place here will be executed every time your command is executed
         vscode.window.showInputBox().then(searchInput => {
-            const webPanel = vscode.window.createWebviewPanel("vscode.previewHtml", searchInput, vscode.ViewColumn.Beside, { });
+            if(!searchInput) return; // If searchInput is undefined
 
+            const webPanel = vscode.window.createWebviewPanel("vscode.previewHtml", searchInput, vscode.ViewColumn.Beside, { });
             fetchGoogleResultPage(searchInput, searchResultJson => {
                 webPanel.webview.html = generateHTMLPreview(searchResultJson);
             });

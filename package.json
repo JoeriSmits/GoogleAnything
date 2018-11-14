@@ -2,7 +2,7 @@
     "name": "googleanything",
     "displayName": "GoogleAnything",
     "description": "Extension to search for anything on Google in your code editor",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "joeriSmits",
     "license": "SEE LICENSE IN LICENSE.txt",
     "homepage": "https://github.com/JoeriSmits/GoogleAnything",

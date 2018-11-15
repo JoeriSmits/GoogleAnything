@@ -16,16 +16,3 @@ This extension contributes the following settings:
 
 * `GoogleAnything.GoogleApiKey`: Google API Key for custom search
 * `GoogleAnything.GoogleCX`: CX Code for the custom search
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 0.0.2
-
-* Cancel search when search input is empty
-* README demo.gif path fix
-
-### 0.0.1
-
-Initial release of GoogleAnything
